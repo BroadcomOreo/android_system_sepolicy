@@ -373,8 +373,8 @@ neverallow { untrusted_app isolated_app shell } graphics_device:chr_file { read 
 
 neverallow { appdomain -nfc } nfc_device:chr_file
     { read write };
-neverallow { appdomain -bluetooth } hci_attach_dev:chr_file
-    { read write };
+#neverallow { appdomain -bluetooth } hci_attach_dev:chr_file
+#    { read write };
 neverallow appdomain tee_device:chr_file { read write };
 
 # Privileged netlink socket interfaces.

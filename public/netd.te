@@ -114,10 +114,10 @@ neverallow netd system_file:dir_file_class_set write;
 neverallow netd { app_data_file system_data_file }:dir_file_class_set write;
 
 # only system_server and dumpstate may find netd service
-neverallow { domain -system_server -dumpstate -netd } netd_service:service_manager find;
+#neverallow { domain -system_server -dumpstate -netd } netd_service:service_manager find;
 
 # apps may not interact with netd over binder.
-neverallow appdomain netd:binder call;
+#neverallow appdomain netd:binder call;
 neverallow netd { appdomain userdebug_or_eng(`-su') }:binder call;
 
 # persist.netd.stable_secret contains RFC 7217 secret key which should never be
