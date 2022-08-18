@@ -172,6 +172,7 @@ class file
 inherits file
 {
 	execute_no_trans
+	add_name
 	entrypoint
 	execmod
 	open
